@@ -1,13 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import "./index.css";
+import App from "./App";
+import { Layout } from "./Components/Layout/Layout";
+import { MyImages } from "./Components/MyImages/MyImages";
+import { Single } from "./Components/Single/Single";
+import { Profile } from "./Components/Profile/Profile";
+import { NotFound } from "./Components/NotFound/NotFound";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "./context/FirestoreContext";
+import { AuthProvider, useAuthContext } from "./context/AuthContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// "protecting" the my-images route (so it cannot be accessed when the user is not logged in)
+function AppRoutes() {
+  const { currentUser } = useAuthContext();
+  return (
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/images/:id" element={<Single />} />
+      <Route path="*" element={<NotFound/>} />
+      <Route path="/profile" element={<Profile/>} />
+      {currentUser && <Route path="my-images" element={<MyImages />} />}
+    </Routes>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <Provider>
+        <Router>
+          <Layout>
+            <AppRoutes />
+          </Layout>
+        </Router>
+      </Provider>
+    </AuthProvider>
   </React.StrictMode>
 );
 
