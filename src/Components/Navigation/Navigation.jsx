@@ -106,7 +106,7 @@ function Dropdown() {
           >
             {avatar}
           </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li>
               <a className="dropdown-item text-center" href="#">
                 {currentUser && <Link to="/profile">{username}</Link>}                
