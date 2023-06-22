@@ -9,7 +9,7 @@ function App() {
   const { authenticate } = useAuthContext();
 
   const count = useMemo(() => {
-    return `you have ${state.items.length} image${
+    return `There are ${state.items.length} image${
       state.items.length > 1 ? "s" : ""
     }`;
   }, [state.items]);
