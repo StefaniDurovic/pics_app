@@ -19,6 +19,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/pics_app" element={<App />} />
       <Route path="/images/:id" element={<Single />} />
       <Route path="*" element={<NotFound/>} />
       <Route path="/profile" element={<Profile/>} />
