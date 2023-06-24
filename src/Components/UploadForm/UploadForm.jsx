@@ -9,7 +9,6 @@ const { uploadFile, downloadFile } = Storage;
 
 const Preview = () => {
   const { state } = useContext(Context);
-  const { currentUser } = useAuthContext();
 
   return (
     state.inputs.path && (

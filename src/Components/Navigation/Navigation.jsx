@@ -125,10 +125,10 @@ function Dropdown() {
 
 export const Navigation = () => {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
+      <nav className="navbar navbar-expand-lg nav-background navbar-light bg-light mb-5">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            ⚡ Pixagram
+            Pixagram
           </a>
           <button
             className="navbar-toggler"

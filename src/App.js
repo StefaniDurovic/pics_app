@@ -9,9 +9,7 @@ function App() {
   const { authenticate } = useAuthContext();
 
   const count = useMemo(() => {
-    return `There are ${state.items.length} image${
-      state.items.length > 1 ? "s" : ""
-    }`;
+    return `There ${state.items.length > 1 ? "are" : "is"} ${state.items.length} image${state.items.length > 1 ? "s" : ""}`;
   }, [state.items]);
 
   useEffect(() => {
