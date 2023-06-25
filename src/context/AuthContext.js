@@ -9,7 +9,7 @@ export const AuthProvider = ({children}) => {
     const login = () => signIn().then(setCurrentUser); // this will set the result of the signIn promise to as the new value for currentUser
     const logout = () => {
         signOut().then(() => setCurrentUser(null));
-        window.location.href = "/";
+        window.location.href = "/pics_app";
     };
     const authenticate = () => getCurrentUser().then(setCurrentUser);
     
