@@ -26,7 +26,7 @@ export const MyImages = () => {
     return(
         <>
             <h1>My Images</h1>
-            {count}
+            <p className="mt-3 mb-4">{count}</p>
             <List items={items}/>
         </>
     )

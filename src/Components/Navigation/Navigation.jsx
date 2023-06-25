@@ -109,7 +109,7 @@ function Dropdown() {
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li>
               <a className="dropdown-item text-center" href="#">
-                {currentUser && <Link to="/profile">{username}</Link>}                
+                {currentUser && <Link className="dropdown-link" to="/profile">{username}</Link>}                
               </a>
               <li><hr className="dropdown divider"/></li>
             </li>

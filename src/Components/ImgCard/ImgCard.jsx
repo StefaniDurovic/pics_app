@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ImgCard = ({path, title, createdAt, user, id}) => {
     const navigate = useNavigate();

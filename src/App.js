@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <h1>Gallery</h1>
-      {count}
+      <p className="mt-3 mb-4">{count}</p>
       <List items={state.items}/>
     </>
   );

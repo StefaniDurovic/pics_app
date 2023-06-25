@@ -53,7 +53,7 @@ export const UploadForm = () => {
   return (
     state.isCollapsed && (
       <>
-        <p className="display-6 text-center mb-3">Upload Stock Image</p>
+        <p className="display-6 text-center mb-3">Upload Image</p>
         <div className="mb-5 d-flex align-items-center justify-content-center">
           <Preview {...state.inputs} />
           <form
@@ -66,7 +66,7 @@ export const UploadForm = () => {
                 type="text"
                 className="form-control"
                 name="title"
-                placeholder="title"
+                placeholder="Title"
                 aria-describedby="text"
                 onChange={handleOnChange}
               />

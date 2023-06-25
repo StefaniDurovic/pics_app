@@ -10,10 +10,10 @@ export const Single = () => {
 
     return(
        <>
-        <button className="btn btn-link" onClick={() => navigate(-1)}>Back</button>
-        <div className="d-flex justify-content-center mb-5">
+        <div className="d-flex justify-content-center mb-2">
             <ImgCard {...item}/>
         </div>
+        <button className="btn btn-danger d-flex justify-content-start mb-5 ms-5" onClick={() => navigate(-1)}>Go back</button>
        </>
     )
 }

@@ -4,10 +4,10 @@ export const NotFound = () => {
   const navigate = useNavigate();
   return (
     <>
-      <button className="btn btn-link mb-5" onClick={() => navigate(-1)}>Back</button>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-flex justify-content-center align-items-center mt-5">
         <h1>Looks like you are lost</h1>
-      </div>
+      </div>      
+      <button className="btn btn-danger mt-5" onClick={() => navigate(-1)}>Go back</button>
     </>
   );
 };
